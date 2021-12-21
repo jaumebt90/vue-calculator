@@ -12,15 +12,15 @@
 
     <!-- Calculator buttons -->
     <div class="row no-gutters">
-      <div class="col-3" v-for="n in calculatorElements" :key="n">
+      <div class="col-3" v-for="x in calculatorElements" :key="x">
         <div
           class="lead text-white text-center m-1 py-3 background rounded hover-class"
           :class="{
-            operators: ['C', '*', '/', '-', '+', '%', '='].includes(n),
+            operators: ['C', '*', '/', '-', '+', '%', '='].includes(x),
           }"
-          @click="action(n)"
+          @click="action(x)"
         >
-          {{ n }}
+          {{ x }}
         </div>
       </div>
     </div>
@@ -61,27 +61,27 @@ export default {
     };
   },
   methods: {
-    action(n) {
+    action(x) {
       //Append value
-      if (!isNaN(n) || n === ".") {
-        this.calculatorValue += n + "";
+      if (!isNaN(x) || x === ".") {
+        this.calculatorValue += x + "";
       }
       //Clear value
-      if (n === "C") {
+      if (x === "C") {
         this.calculatorValue = "";
       }
       //Percentage
-      if (n === "%") {
+      if (x === "%") {
         this.calculatorValue = this.calculatorValue / 100 + "";
       }
       //Operators
-      if (["/", "*", "-", "+"].includes(n)) {
-        this.operator = n;
+      if (["/", "*", "-", "+"].includes(x)) {
+        this.operator = x;
         this.previousCalculatorValue = this.calculatorValue;
         this.calculatorValue = "";
       }
       //Calculate result using the eval function
-      if (n === "=") {
+      if (x === "=") {
         this.calculatorValue = eval(
           this.previousCalculatorValue + this.operator + this.calculatorValue
         );
