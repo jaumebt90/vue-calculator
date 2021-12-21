@@ -5,7 +5,7 @@
   >
     <!-- Calculator Result -->
     <div
-      class="w-full rounded m-1 p-3 text-right lead font-weight-bold text-white bg-vue-dark"
+      class="w-full rounded m-1 p-3 text-right lead font-weight-bold text-white background"
     >
       {{ calculatorValue || 0 }}
     </div>
@@ -14,7 +14,7 @@
     <div class="row no-gutters">
       <div class="col-3" v-for="n in calculatorElements" :key="n">
         <div
-          class="lead text-white text-center m-1 py-3 bg-vue-dark rounded hover-class"
+          class="lead text-white text-center m-1 py-3 background rounded hover-class"
           :class="{
             operators: ['C', '*', '/', '-', '+', '%', '='].includes(n),
           }"
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style scoped>
-.bg-vue-dark {
+.background {
   background: #767676;
 }
 .hover-class:hover {
