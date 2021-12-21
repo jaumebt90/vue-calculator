@@ -110,6 +110,9 @@ export default {
   background-color: #f2f2f2;
   border: 1px solid #999;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .operator {
   background-color: orange;
   color: white;
