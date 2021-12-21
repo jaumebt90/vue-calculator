@@ -1,8 +1,7 @@
 <template>
-  <!-- Happy Coding -->
   <div
     class="p-3"
-    style="max-width: 400px; margin: 50px auto; background: #234"
+    style="max-width: 400px; margin: 50px auto; background: white"
   >
     <!-- Calculator Result -->
     <div
@@ -17,7 +16,7 @@
         <div
           class="lead text-white text-center m-1 py-3 bg-vue-dark rounded hover-class"
           :class="{
-            'bg-vue-green': ['C', '*', '/', '-', '+', '%', '='].includes(n),
+            operators: ['C', '*', '/', '-', '+', '%', '='].includes(n),
           }"
           @click="action(n)"
         >
@@ -96,13 +95,13 @@ export default {
 
 <style scoped>
 .bg-vue-dark {
-  background: #31475e;
+  background: #767676;
 }
 .hover-class:hover {
   cursor: pointer;
   background: #3d5875;
 }
-.bg-vue-green {
-  background: #3fb984;
+.operators {
+  background: orange;
 }
 </style>
