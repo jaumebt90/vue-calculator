@@ -5,17 +5,17 @@
 </template>
 
 <script>
-import Calculator from './components/Calculator.vue'
+import Calculator from "./components/Calculator.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Calculator
-  }
-}
+    Calculator,
+  },
+};
 </script>
 
 <style>
-  body {
-    background: #31475e !important;
-  }
+body {
+  background: #31475e !important;
+}
 </style>

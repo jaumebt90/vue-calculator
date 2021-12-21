@@ -3,14 +3,14 @@
     class="p-3"
     style="max-width: 400px; margin: 50px auto; background: white"
   >
-    //Calculator Result
+    <!-- Calculator Result -->
     <div
       class="w-full rounded m-1 p-3 text-right lead font-weight-bold text-white background"
     >
       {{ calculatorValue || 0 }}
     </div>
 
-    //Calculator buttons
+    <!-- Calculator buttons -->
     <div class="row no-gutters">
       <div class="col-3" v-for="n in calculatorElements" :key="n">
         <div
