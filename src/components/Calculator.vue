@@ -3,14 +3,14 @@
     class="p-3"
     style="max-width: 400px; margin: 50px auto; background: white"
   >
-    <!-- Calculator Result -->
+    //Calculator Result
     <div
       class="w-full rounded m-1 p-3 text-right lead font-weight-bold text-white background"
     >
       {{ calculatorValue || 0 }}
     </div>
 
-    <!-- Calculator buttons -->
+    //Calculator buttons
     <div class="row no-gutters">
       <div class="col-3" v-for="n in calculatorElements" :key="n">
         <div
@@ -62,25 +62,25 @@ export default {
   },
   methods: {
     action(n) {
-      /* Append value */
+      //Append value
       if (!isNaN(n) || n === ".") {
         this.calculatorValue += n + "";
       }
-      /* Clear value */
+      //Clear value
       if (n === "C") {
         this.calculatorValue = "";
       }
-      /* Percentage */
+      //Percentage
       if (n === "%") {
         this.calculatorValue = this.calculatorValue / 100 + "";
       }
-      /* Operators */
+      //Operators
       if (["/", "*", "-", "+"].includes(n)) {
         this.operator = n;
         this.previousCalculatorValue = this.calculatorValue;
         this.calculatorValue = "";
       }
-      /* Calculate result using the eval function */
+      //Calculate result using the eval function
       if (n === "=") {
         this.calculatorValue = eval(
           this.previousCalculatorValue + this.operator + this.calculatorValue
