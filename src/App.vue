@@ -1,26 +1,21 @@
 <template>
   <div id="app">
-    <Calculator />
+    <calculator></calculator>
   </div>
 </template>
 
 <script>
-import Calculator from "./components/Calculator.vue";
+import Calculator from './components/Calculator.vue'
 export default {
-  name: "app",
+  name: 'App',
   components: {
-    Calculator,
-  },
-};
+    Calculator
+  }
+}
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background: #31475e !important;
+  }
 </style>
